@@ -1,6 +1,7 @@
 """Knowledge base for Sudokus."""
 from __future__ import annotations
 import time
+from copy import copy
 from pathlib import Path
 import logging
 import re
@@ -18,6 +19,7 @@ def find_cells(core: str, keywords: list[str]) -> list[tuple[int, int]]:
 
     `gridValue` is always used.
     """
+    keywords = copy(keywords)
     keywords.append('gridValue')
     used_cells = []
     for keyword in keywords:
