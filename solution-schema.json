@@ -1,0 +1,101 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "https://example.com/product.schema.json",
+	"title": "Solution",
+	"description": "Contains required data to form a step by step solution of a sudoku",
+	"type": "object",
+	"required": [
+		"steps"
+	],
+	"properties": {
+		"steps": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [
+					"step_nr",
+					"cell",
+					"used_cells",
+					"current_structure"
+				],
+				"properties": {
+					"step_nr": {
+						"type": "integer"
+					},
+					"core": {
+						"type": "string"
+					},
+					"cost": {
+						"type": "integer"
+					},
+					"cell": {
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					"used_cells": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"required": [
+								"value",
+								"cells"
+							],
+							"properties": {
+								"value": {
+									"type": "integer"
+								},
+								"cells": {
+									"type": "array",
+									"items": {
+										"type": "array",
+										"items": {
+											"type": "integer"
+										}
+									}
+								}
+							}
+						}
+					},
+					"current_structure": {
+						"type": "array",
+						"items": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"thermo": {
+		"type": "array",
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
+		}
+	},
+	"killer_cages": {
+		"type": "array",
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
+		}
+	},
+	"killer_cage_sums": {
+		"type": "array",
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
+		}
+	}
+}
