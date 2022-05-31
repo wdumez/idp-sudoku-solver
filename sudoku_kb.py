@@ -619,7 +619,7 @@ class UnsupportedRule(Exception):
 def main():
     """Main."""
     from sudoku_parser import parse_sudoku_file
-    sudoku = parse_sudoku_file('./sudokus/9x9easy.sudoku')
+    sudoku = parse_sudoku_file('./sudokus/easy.sudoku')
     kb = SudokuKB()
     kb.add_rule('normal')
     print(kb)
