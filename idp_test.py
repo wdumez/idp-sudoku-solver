@@ -4,7 +4,7 @@ If this test fails, there's something extremely wrong.
 It defines 3 variables, that each are either True or False.
 """
 from pathlib import Path
-from custompyidp3.typedIDP import IDP
+from pyidp3.typedIDP import IDP
 
 
 HOME = str(Path.home())
