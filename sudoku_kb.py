@@ -5,7 +5,7 @@ from copy import copy
 from pathlib import Path
 import logging
 import re
-from custompyidp3.typedIDP import IDP
+from pyidp3.typedIDP import IDP
 
 
 def find_cells(core: str, keywords: list[str]) -> list[tuple[int, int]]:
